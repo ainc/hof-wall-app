@@ -2,8 +2,8 @@
 
 ## Downloading and cloning
 In order to download and clone the repository, you will need the latest version of the following:
-  Andrioid Studio
-  Xcode
+  Andrioid Studio,
+  Xcode,
   Flutter
   
 The best way to install Flutter is downloading Android Studio, then installing the flutter packages/SDK within Studio. 
