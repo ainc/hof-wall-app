@@ -15,7 +15,7 @@ All the files should be in place within your project directory. If things are no
 The app itself relies on Flutter and several dart files in the library directory to function. These files are all connected by navigation within the app, and cannot be navigated using external buttons on the iPad. 
 
 ## GALLERY: 
-The gallery.dart takes a list of information from a JSON file (gallery.json) that has paths to each different HoF member and then redirects and displays each of them when the gallery is selected.
+The Gallery exists within the quizpage.dart, and displays an image of each of the Hall of Fame members. It currently is not in any particular order, and is hard-coded alongside the rest of the quizpage. The current functionality is limited to just pictures, and is quite rudimentary; eventually the app will connect to an API and have more info next to each member besides a picture.
 
 ## TRIVIA:
 The quizpage.dart is where the magic happens. The page takes a list of info from a JSON file (trivia.json) that creates objects for each question, namely the answer choices, the question, and the correct answer. It also has a timer function that displays a basic numeric countdown timer for the user, reaching 0 transitions automatically to the next question. The trivia portion ends when all questions are answered and the user is taken to the resultspage.dart where their score is displayed alongside an image and text based on their performance.
