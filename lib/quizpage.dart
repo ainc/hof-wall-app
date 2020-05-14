@@ -36,11 +36,29 @@ class getjson extends StatelessWidget {
         List mydata = json.decode(snapshot.data.toString());
         if (mydata == null) {
           return Scaffold(
-            body: Center(
-              child: Text(
-                "Error",
-              ),
+            appBar: AppBar(
+              title: Text("Gallery"),
             ),
+              body: new Center(
+                child: new ListView(
+                  children: [
+                    Image.asset('assets/colonel_sanders.jpg',
+                        width: 400.0,
+                        height: 1000.0,
+                        fit: BoxFit.contain),
+                    Image.asset('assets/warren_rosenthal.jpg',
+                        width: 400.0,
+                        height: 1000.0,
+                        fit: BoxFit.contain),
+                    Image.asset('assets/colonel_sanders.jpg',
+                        width: 400.0,
+                        height: 1000.0,
+                        fit: BoxFit.contain),
+                  ],
+                )
+              )
+
+
           );
         } else {
           return quizpage(mydata: mydata);
@@ -172,10 +190,6 @@ class _quizpageState extends State<quizpage> {
   }
 
   void checkanswer(String k) {
-    // in the previous version this was
-    // mydata[2]["1"] == mydata[1]["1"][k]
-    // which i forgot to change
-    // so nake sure that this is now corrected
     if (mydata[2][i.toString()] == mydata[1][i.toString()][k]) {
       // just a print statement to check the correct working
       // debugPrint(mydata[2][i.toString()] + " is equal to " + mydata[1][i.toString()][k]);
